@@ -61,4 +61,6 @@ export type DropdownProps = {
   searchQuery?: (keyword: string, labelValue: string) => boolean;
   onChangeText?: (search: string) => void;
   onConfirmSelectItem?: (item: any) => void;
+  dropDownHitSlop?: { top?: number; bottom?: number; left?: number;  right?:number},
+  dropDownTouchAreaStyles?:ViewStyle
 };

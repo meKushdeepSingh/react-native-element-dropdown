@@ -86,6 +86,8 @@ const DropdownComponent = React.forwardRef<any, DropdownProps>(
       onConfirmSelectItem,
       accessibilityLabel,
       itemAccessibilityLabelField,
+       dropDownHitSlop,
+       dropDownTouchAreaStyles
     } = props;
 
     const ref = useRef<View>(null);
@@ -338,6 +340,7 @@ const DropdownComponent = React.forwardRef<any, DropdownProps>(
       return (
         <TouchableWithoutFeedback
           testID={testID}
+          style={dropDownTouchAreaStyles} hitSlop={dropDownHitSlop}
           accessible={!!accessibilityLabel}
           accessibilityLabel={accessibilityLabel}
           onPress={showOrClose}
